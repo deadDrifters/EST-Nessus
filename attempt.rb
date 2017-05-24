@@ -2,8 +2,8 @@ execute "download" do
         #unless File.file?("~/Nessus/Nessus.deb")
         unless  ::File.file?("~/Nessus/Nessus_")
                 cwd ~/Nessus/
-                command "sudo wget https://github.com/deadDrifters/EST-Nessus/raw/master/Nessus_ -P ~/Nes$
-                #command "sudo wget  -O ~/Nessus/ \"http://downloads.nessus.org/nessus3dl.php?file=Nessus$
+                command "sudo wget https://github.com/deadDrifters/EST-Nessus/raw/master/Nessus_ -P ~/Nessus/"$
+                #command "sudo wget  -O ~/Nessus/ \"http://downloads.nessus.org/nessus3dl.php?file=Nessus""$
         end
 end
 execute "install" do
