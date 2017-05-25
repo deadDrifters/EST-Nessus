@@ -52,7 +52,13 @@ PTY.spawn("sudo ../../../opt/nessus/sbin/nessuscli adduser Scanner") do |reader,
 	writer.puts("y")
 end
 
+execute "challenge_code" do
+	command "sudo ../../../opt/nessus/sbin/nessuscli fetch --challenge"
+end
 
+execute "register" do
+	command "sudo ../../../opt/nessus/sbin./nessuscli fetch --register-offline ~/Git/nessus.license"
+end
 #execute "Stop" do
 #	command "service nessusd stop"
 #end
